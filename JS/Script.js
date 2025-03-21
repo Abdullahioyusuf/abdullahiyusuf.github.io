@@ -5,10 +5,7 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
 });
-// Placeholder for future JavaScript enhancements
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Portfolio loaded');
-});
+
 // Load Theme Preference
 window.onload = () => {
     if (localStorage.getItem('theme') === 'dark') {
@@ -38,19 +35,3 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('AI Chatbot Coming Soon!');
     });
 });
-/* Custom styles for your portfolio */
-body {
-    font-family: "Roboto", sans-serif;
-}
-
-.w3-teal {
-    background-color: #009688 !important;
-}
-
-.w3-text-teal {
-    color: #009688 !important;
-}
-
-.w3-button {
-    margin: 5px;
-}
