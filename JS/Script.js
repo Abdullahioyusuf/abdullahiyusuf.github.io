@@ -26,7 +26,10 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 
 // AI Chatbot Placeholder
 document.addEventListener('DOMContentLoaded', () => {
-    const chatBtn = document.getElementById('chatbot-btn');
+    const chatBtn = document.createElement('button');
+    chatBtn.textContent = 'Chat with AI';
+    chatBtn.id = 'chatbot-btn';
+    document.body.appendChild(chatBtn);
 
     chatBtn.addEventListener('click', () => {
         alert('AI Chatbot Coming Soon!');
