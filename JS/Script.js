@@ -5,7 +5,10 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
 });
-
+// Placeholder for future JavaScript enhancements
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Portfolio loaded');
+});
 // Load Theme Preference
 window.onload = () => {
     if (localStorage.getItem('theme') === 'dark') {
