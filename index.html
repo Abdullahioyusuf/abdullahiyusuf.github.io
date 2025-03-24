@@ -270,23 +270,12 @@
       <div class="container" data-aos="fade" data-aos-delay="100">
         <div class="row gy-4">
           <div class="col-lg-4">
-           <div class="col-lg-8">
-  <form action="contact.php" method="post">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="subject">Subject:</label>
-    <input type="text" id="subject" name="subject" required><br><br>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
-    <input type="submit" value="Send">
-  </form>
-</div>
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Minneapolis, MN</p>
+              </div>
             </div>
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
@@ -307,27 +296,20 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                  <button type="submit">Send Message</button>
-                </div>
-              </div>
+            <form action="contact.php" method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required><br><br>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required><br><br>
+
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject" required><br><br>
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+              <input type="submit" value="Send">
             </form>
           </div>
         </div>
@@ -346,7 +328,6 @@
         <div class="copyright">
           <span>Copyright</span> <strong class="px-1 sitename">Abdullahi Yusuf</strong> <span>All Rights Reserved</span>
         </div>
-    
       </div>
     </div>
   </footer>
