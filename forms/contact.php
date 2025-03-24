@@ -1,13 +1,15 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "abdullahioyusuf21@gmail.com"; // Your email
-    $from_name = strip_tags($_POST['name']);
+    $from_name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
     $from_email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $subject = strip_tags($_POST['subject']);
-    $message = htmlspecialchars($_POST['message']);
+    $subject = filter_var(trim($_POST['subject']), FILTER_SANITIZE_STRING);
+    $message = strip_tags($_POST['message']); // Remove HTML tags
 
     if (!filter_var($from_email, FILTER_VALIDATE_EMAIL)) {
-        die("Invalid email format");
+        http_response_code(400);
+        echo json_encode(["status" => "error", "message" => "Invalid email format."]);
+        exit;
     }
 
     $headers = "From: $from_name <$from_email>\r\n";
@@ -16,11 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send email
     if (mail($to, $subject, $message, $headers)) {
-        echo "Message sent successfully!";
+        http_response_code(200);
+        echo json_encode(["status" => "success", "message" => "Message sent successfully!"]);
     } else {
-        echo "Message sending failed.";
+        http_response_code(500);
+        echo json_encode(["status" => "error", "message" => "Message sending failed."]);
     }
 } else {
-    die("Invalid request.");
+    http_response_code(405);
+    echo json_encode(["status" => "error", "message" => "Invalid request method."]);
 }
 ?>
