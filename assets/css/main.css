@@ -1457,3 +1457,19 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.contact .info-item {
+  font-size: 1.2rem; /* Make text larger */
+}
+
+.contact .info-item i {
+  font-size: 2rem; /* Make icons larger */
+  margin-right: 15px; /* Add spacing between icon and text */
+}
+
+.contact .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Adjust spacing between items */
+}
